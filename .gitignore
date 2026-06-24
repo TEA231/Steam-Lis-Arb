@@ -1,0 +1,12 @@
+# Python files
+
+__pycache__/
+*.py[cod]
+
+# environments 
+
+.env.production
+.env.local
+
+# virtual envs
+venv
