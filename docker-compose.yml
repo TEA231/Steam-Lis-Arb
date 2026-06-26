@@ -1,23 +1,7 @@
-services:
-  analytics_service:
-    extends:
-      file: analytics_service/docker-compose.yml
-      service: analytics
-
-  analytics_db:
-    extends:
-      file: analytics_service/docker-compose.yml
-      service: db
-
-  # trading_bot:
-  #   extends:
-  #     file: trading_bot/docker-compose.yml
-  #     service: bot
-  #
-  # backend_service:
-  #   extends:
-  #     file: backend_service/docker-compose.yml
-  #     service: backend
+include:
+  - analytics_service/docker-compose.yml
+  # - trading_bot/docker-compose.yml    # когда появится
+  # - backend_service/docker-compose.yml
 
 volumes:
   cs_skins_dataset:
