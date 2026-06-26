@@ -3,9 +3,8 @@
 An asynchronous event-driven arbitrage and statistical analysis system for digital assets (Steam Market & Lis-Skins).
 
 ## Architecture Layout
-- **parser_service**: A standalone service for batch sampling and aggregation of asset prices.
+- **analytics_service**: Data Pipeline & Market Intelligence Engine.
 - **trading_bot**: Real-time event-driven trading execution core via WebSockets.
-- **analytics**: Mathematical research module for liquidity scoring, MAD, and outlier filtration.
 - **backend_service**: Interface layer and Telegram notification bot.
 
 ## Tech Stack

@@ -1,12 +1,23 @@
-services: 
-  db: 
-    image: postgres:15-alpine
-    ports:
-      - "5432:5432"
-    volumes:
-      - cs_skins_dataset:/var/lib/postgresql/data
-    env_file:
-      - .env.local
+services:
+  analytics_service:
+    extends:
+      file: analytics_service/docker-compose.yml
+      service: analytics
+
+  analytics_db:
+    extends:
+      file: analytics_service/docker-compose.yml
+      service: db
+
+  # trading_bot:
+  #   extends:
+  #     file: trading_bot/docker-compose.yml
+  #     service: bot
+  #
+  # backend_service:
+  #   extends:
+  #     file: backend_service/docker-compose.yml
+  #     service: backend
 
 volumes:
   cs_skins_dataset:
