@@ -12,8 +12,10 @@ from app.db.base import Base
 class MarketSkinsDaily(Base):
     __tablename__ = "market_skins_daily"
 
-    id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    title: Mapped[str] = mapped_column(String, nullable=False)
-    price: Mapped[float] = mapped_column(Float, nullable=False)
-    qty: Mapped[int] = mapped_column(Integer, nullable=False)
-    parsed_time: Mapped[time] = mapped_column(Time, nullable=False)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)      
+    title: Mapped[str] = mapped_column(String, nullable=False)      # Название скина
+    price: Mapped[float] = mapped_column(Float, nullable=False)     # Цена скина
+    qty: Mapped[int] = mapped_column(Integer, nullable=False)       # Количество скина
+    parsed_time: Mapped[time] = mapped_column(Time, nullable=False) # Время парсинга
+
+    # Таблица со значениями собранными за день
